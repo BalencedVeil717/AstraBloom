@@ -1,0 +1,412 @@
+﻿/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    color: cyan;
+}
+
+/* Layout */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    background-color: #201235;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    justify-content: center;
+    padding: 1em;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Header */
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.icon {
+    font-size: 2em;
+}
+
+.big {
+    font-weight: 1000;
+    font-size: 1.2em;
+}
+
+.small {
+    font-size: 0.7em;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    font-weight: 700;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+/* Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    padding: 1em;
+    border-radius: 20px;
+    border: 1px solid #2A203E;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.34);
+    background-color: #1D1730;
+}
+
+.tab {
+    max-width: fit-content;
+    padding: 10px 1em;
+    border-radius: 20px;
+    background-color: #1F2037;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+}
+
+/* Content Section [Common] */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+.heading {
+    font-size: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1.2em;
+}
+
+/* Feature Button Styles */
+.btns {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.btns button {
+    padding: 0.7em 1em;
+    font-size: 0.8em;
+    border-radius: 10px;
+    border: none;
+    background-color: #1F2037;
+    cursor: pointer;
+    font-weight: 1000;
+}
+
+button.features {
+    color: black;
+    background-color: #7BB8FF;
+    box-shadow: 3px 15px 20px rgba(123, 184, 255, 0.09);
+}
+
+button.see {
+    border: 1px solid #252037;
+    background: none;
+}
+
+button.bottom-btn {
+    padding: 0.7em 1em;
+    font-size: 0.8em;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    background-color: #9090FF;
+    box-shadow: 15px 3px 50px rgba(144, 144, 255, 0.18);
+    color: black;
+    cursor: pointer;
+}
+
+/* Feature Cards */
+.f-cards {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.fcard {
+    background-color: #221E34;
+    padding: 1em;
+    border-radius: 10px;
+    width: calc(50% - 1em);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid #2A203E;
+}
+
+.f-h {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* Z-Cards Section */
+.z-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2em;
+}
+
+.zcard {
+    background-color: #221E34;
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2A203E;
+}
+
+.z-i {
+    font-size: 2em;
+    padding: 0.2em;
+    background-color: #2b203c;
+    border-radius: 20px;
+}
+
+.z-t {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.z-d {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* D-Cards Section */
+.d-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.dcard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1em;
+    background-color: #271F39;
+    padding: 1em;
+    border-radius: 10px;
+    border: 1px solid #2A203E;
+}
+
+.d-h {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* Bottom Section */
+.bottom {
+    border-top: 1px solid #261D38;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.comp-mood {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.comp-h, .mood-h {
+    font-size: 0.9em;
+}
+
+.comp-d, .mood-d {
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+/* Mailing Section */
+.mailing {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.mailing form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1em;
+    width: 100%;
+    max-width: 500px;
+    flex-wrap: wrap;
+}
+
+.mailing form #email {
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 1px solid #2A203E;
+    background: none;
+    font-size: 0.9em;
+    width: 100%;
+    max-width: 300px;
+}
+
+.mailing form #subscribe {
+    padding: 0.7em 1em;
+    font-size: 0.8em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 1000;
+    color: black;
+    background-color: #7BB8FF;
+    box-shadow: 3px 15px 20px rgba(123, 184, 255, 0.09);
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .nav {
+        justify-content: center;
+    }
+
+    .comp-mood {
+        justify-content: center;
+    }
+
+    .mailing form {
+        justify-content: center;
+    }
+
+    .icon {
+        font-size: 3em;
+    }
+
+    .big {
+        font-size: 1.5em;
+    }
+
+    .small {
+        font-size: 0.8em;
+    }
+
+    .heading {
+        font-size: 3em;
+    }
+
+    .description {
+        font-size: 1.5em;
+    }
+
+    .btns button {
+        font-size: 1em;
+    }
+
+    .comp-h, .mood-h {
+        font-size: 1em;
+    }
+
+    .comp-d, .mood-d {
+        font-size: 1.5em;
+    }
+
+    .f-h {
+        font-size: 1.5em;
+    }
+
+    .z-i {
+        font-size: 3em;
+    }
+
+    .z-t {
+        font-size: 1.5em;
+    }
+
+    .z-d {
+        font-size: 1em;
+    }
+
+    .d-h {
+        font-size: 1.5em;
+    }
+
+    .mailing form #email {
+        font-size: 1em;
+    }
+
+    .mailing form #subscribe {
+        font-size: 1em;
+    }
+
+    .card {
+        padding: 3em;
+    }
+}
