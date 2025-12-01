@@ -34,6 +34,7 @@
     font-family: 'Poppins', sans-serif;
     list-style-type: none;
     color: var(--text-color);
+    scroll-behavior: smooth;
 }
 
 /* Layout */
@@ -99,6 +100,12 @@ body {
     font-weight: var(--bold-weight);
     flex-wrap: wrap;
     gap: var(--standard-gap);
+}
+
+.nav li a {
+    text-decoration: none;
+    cursor: none;
+    scroll-behavior: smooth;
 }
 
 /* Card */
@@ -359,6 +366,7 @@ button.bottom-btn {
     flex-wrap: wrap;
     gap: var(--standard-gap);
 }
+
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
