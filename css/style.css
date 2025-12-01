@@ -1,13 +1,39 @@
 ﻿/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+:root {
+    --main-bg: #0d041b;
+    --main-card-bg: #0c1323;
+    --small-card-bg: #201b30;
+    --border-color: #2A203E;
+    --text-color: cyan;
+    --feature-btn-bg: #7BB8FF;
+    --feature-btn-shadow: rgba(123, 184, 255, 0.09);
+    --bottom-btn-bg: #9090FF;
+    --bottom-btn-shadow: rgba(144, 144, 255, 0.18);
+    --dark-btn-bg: #1F2037;
+    --card-shadow: rgba(5, 17, 53, 0.1);
+    --tab-shadow: rgba(251, 251, 251, 0.1);
+    --standard-gap: 1em;
+    --large-gap: 2em;
+    --xlarge-gap: 3em;
+    --standard-padding: 1em;
+    --standard-radius: 10px;
+    --large-radius: 20px;
+    --standard-font: 0.8em;
+    --medium-font: 1.2em;
+    --large-font: 2em;
+    --bold-weight: 700;
+    --bolder-weight: 1000;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     list-style-type: none;
-    color: cyan;
+    color: var(--text-color);
 }
 
 /* Layout */
@@ -15,8 +41,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1em;
-    background-color: #201235;
+    padding: var(--standard-padding);
+    background-color: var(--main-bg);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -26,9 +52,9 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: var(--xlarge-gap);
     justify-content: center;
-    padding: 1em;
+    padding: var(--standard-padding);
     max-width: 1200px;
     width: 100%;
 }
@@ -38,15 +64,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1em;
+    padding: 0 var(--standard-padding);
     flex-wrap: wrap;
-    gap: 1em;
+    gap: var(--standard-gap);
 }
 
 .head {
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: var(--standard-gap);
     flex-wrap: wrap;
 }
 
@@ -56,8 +82,8 @@ body {
 }
 
 .head-name .big-p {
-    font-weight: 1000;
-    font-size: 1.2em;
+    font-weight: var(--bolder-weight);
+    font-size: var(--medium-font);
 }
 
 .head-name .small-p {
@@ -70,9 +96,9 @@ body {
     justify-content: space-between;
     width: 100%;
     max-width: 400px;
-    font-weight: 700;
+    font-weight: var(--bold-weight);
     flex-wrap: wrap;
-    gap: 1em;
+    gap: var(--standard-gap);
 }
 
 /* Card */
@@ -80,21 +106,21 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2em;
-    padding: 1em;
-    border-radius: 20px;
-    border: 1px solid #2A203E;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.34);
-    background-color: #1D1730;
+    gap: var(--large-gap);
+    padding: var(--standard-padding);
+    border-radius: var(--large-radius);
+    border: 1px solid #061b47;
+    box-shadow: 0 0 100px var(--card-shadow);
+    background-color: var(--main-card-bg);
 }
 
 .tab {
     max-width: fit-content;
-    padding: 10px 1em;
-    border-radius: 20px;
-    background-color: #1F2037;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-weight: 700;
+    padding: 10px var(--standard-padding);
+    border-radius: var(--large-radius);
+    background-color: var(--dark-btn-bg);
+    box-shadow: 0 0 100px var(--tab-shadow);
+    font-weight: var(--bold-weight);
 }
 
 /* Content Section [Common] */
@@ -102,40 +128,40 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1em;
+    gap: var(--standard-gap);
 }
 
 .heading {
-    font-size: 2em;
+    font-size: var(--large-font);
     font-family: 'Playfair Display', serif;
-    font-weight: 700;
+    font-weight: var(--bold-weight);
 }
 
 .description {
-    font-size: 1.2em;
+    font-size: var(--medium-font);
 }
 
 /* Feature Button Styles */
 .btns {
     display: flex;
-    gap: 1em;
+    gap: var(--standard-gap);
     flex-wrap: wrap;
 }
 
 .btns button {
-    padding: 0.7em 1em;
-    font-size: 0.8em;
-    border-radius: 10px;
+    padding: 0.7em var(--standard-padding);
+    font-size: var(--standard-font);
+    border-radius: var(--standard-radius);
     border: none;
-    background-color: #1F2037;
-    cursor: pointer;
-    font-weight: 1000;
+    background-color: var(--dark-btn-bg);
+    cursor: none;
+    font-weight: var(--bolder-weight);
 }
 
 button.features {
     color: black;
-    background-color: #7BB8FF;
-    box-shadow: 3px 15px 20px rgba(123, 184, 255, 0.09);
+    background-color: var(--feature-btn-bg);
+    box-shadow: 3px 15px 20px var(--feature-btn-shadow);
 }
 
 button.see {
@@ -144,15 +170,15 @@ button.see {
 }
 
 button.bottom-btn {
-    padding: 0.7em 1em;
-    font-size: 0.8em;
-    font-weight: 700;
-    border-radius: 10px;
+    padding: 0.7em var(--standard-padding);
+    font-size: var(--standard-font);
+    font-weight: var(--bold-weight);
+    border-radius: var(--standard-radius);
     border: none;
-    background-color: #9090FF;
-    box-shadow: 15px 3px 50px rgba(144, 144, 255, 0.18);
+    background-color: var(--bottom-btn-bg);
+    box-shadow: 15px 3px 50px var(--bottom-btn-shadow);
     color: black;
-    cursor: pointer;
+    cursor: none;
 }
 
 /* Feature Cards */
@@ -160,57 +186,57 @@ button.bottom-btn {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    gap: 2em;
+    gap: var(--large-gap);
     flex-wrap: wrap;
 }
 
 .fcard {
-    background-color: #221E34;
-    padding: 1em;
-    border-radius: 10px;
-    width: calc(50% - 1em);
+    background-color: var(--small-card-bg);
+    padding: var(--standard-padding);
+    border-radius: var(--standard-radius);
+    width: calc(50% - var(--standard-gap));
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: var(--standard-gap);
     align-items: flex-start;
     justify-content: center;
-    border: 1px solid #2A203E;
+    border: 1px solid var(--border-color);
 }
 
 .f-h {
-    font-size: 1.2em;
-    font-weight: 700;
+    font-size: var(--medium-font);
+    font-weight: var(--bold-weight);
 }
 
 /* Z-Cards Section */
 .z-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2em;
+    gap: var(--large-gap);
 }
 
 .zcard {
-    background-color: #221E34;
-    padding: 1em;
-    border-radius: 10px;
+    background-color: #1b182b;
+    padding: var(--standard-padding);
+    border-radius: var(--standard-radius);
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: var(--standard-gap);
     align-items: center;
     justify-content: center;
-    border: 1px solid #2A203E;
+    border: 1px solid var(--border-color);
 }
 
 .z-i {
-    font-size: 2em;
+    font-size: var(--large-font);
     padding: 0.2em;
     background-color: #2b203c;
-    border-radius: 20px;
+    border-radius: var(--standard-radius);
 }
 
 .z-t {
-    font-size: 1.2em;
-    font-weight: 700;
+    font-size: var(--medium-font);
+    font-weight: var(--bold-weight);
 }
 
 .z-d {
@@ -222,10 +248,10 @@ button.bottom-btn {
 .d-cards {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: var(--large-gap);
     align-items: center;
     justify-content: center;
-    padding: 1em;
+    padding: var(--standard-padding);
 }
 
 .dcard {
@@ -234,16 +260,16 @@ button.bottom-btn {
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
-    gap: 1em;
-    background-color: #271F39;
-    padding: 1em;
-    border-radius: 10px;
-    border: 1px solid #2A203E;
+    gap: var(--standard-gap);
+    background-color: var(--small-card-bg);
+    padding: var(--standard-padding);
+    border-radius: var(--standard-radius);
+    border: 1px solid var(--border-color);
 }
 
 .d-h {
-    font-size: 1.2em;
-    font-weight: 700;
+    font-size: var(--medium-font);
+    font-weight: var(--bold-weight);
 }
 
 /* Bottom Section */
@@ -252,9 +278,9 @@ button.bottom-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1em;
+    padding: var(--standard-padding);
     flex-wrap: wrap;
-    gap: 1em;
+    gap: var(--standard-gap);
 }
 
 .check {
@@ -270,7 +296,7 @@ button.bottom-btn {
     width: 100%;
     max-width: 600px;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: var(--standard-gap);
 }
 
 .comp-h, .mood-h {
@@ -278,7 +304,7 @@ button.bottom-btn {
 }
 
 .comp-d, .mood-d {
-    font-size: 1.2em;
+    font-size: var(--medium-font);
     font-weight: 600;
     line-height: 1.5em;
 }
@@ -287,7 +313,7 @@ button.bottom-btn {
 .mailing {
     display: flex;
     justify-content: space-between;
-    gap: 1em;
+    gap: var(--standard-gap);
     width: 100%;
     flex-wrap: wrap;
 }
@@ -296,7 +322,7 @@ button.bottom-btn {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 1em;
+    gap: var(--standard-gap);
     width: 100%;
     max-width: 500px;
     flex-wrap: wrap;
@@ -304,8 +330,8 @@ button.bottom-btn {
 
 .mailing form #email {
     padding: 0.5em;
-    border-radius: 10px;
-    border: 1px solid #2A203E;
+    border-radius: var(--standard-radius);
+    border: 1px solid var(--border-color);
     background: none;
     font-size: 0.9em;
     width: 100%;
@@ -313,15 +339,15 @@ button.bottom-btn {
 }
 
 .mailing form #subscribe {
-    padding: 0.7em 1em;
-    font-size: 0.8em;
-    border-radius: 10px;
+    padding: 0.7em var(--standard-padding);
+    font-size: var(--standard-font);
+    border-radius: var(--standard-radius);
     border: none;
-    cursor: pointer;
-    font-weight: 1000;
+    cursor: none;
+    font-weight: var(--bolder-weight);
     color: black;
-    background-color: #7BB8FF;
-    box-shadow: 3px 15px 20px rgba(123, 184, 255, 0.09);
+    background-color: var(--feature-btn-bg);
+    box-shadow: 3px 15px 20px var(--feature-btn-shadow);
 }
 
 /* Footer */
@@ -329,9 +355,9 @@ button.bottom-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1em;
+    padding: var(--standard-padding);
     flex-wrap: wrap;
-    gap: 1em;
+    gap: var(--standard-gap);
 }
 
 /* Media Queries */
@@ -349,7 +375,7 @@ button.bottom-btn {
     }
 
     .icon {
-        font-size: 3em;
+        font-size: var(--xlarge-gap);
     }
 
     .head-name .big-p {
@@ -409,6 +435,6 @@ button.bottom-btn {
     }
 
     .card {
-        padding: 3em;
+        padding: var(--xlarge-gap);
     }
 }
