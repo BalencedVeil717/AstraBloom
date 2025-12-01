@@ -345,7 +345,7 @@ button.bottom-btn {
     max-width: 300px;
 }
 
-.mailing form #subscribe {
+.mailing form #sub {
     padding: 0.7em var(--standard-padding);
     font-size: var(--standard-font);
     border-radius: var(--standard-radius);
