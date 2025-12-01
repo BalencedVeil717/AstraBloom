@@ -20,6 +20,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
+    cursor: none;
 }
 
 .container {
@@ -54,12 +55,12 @@ body {
     border-radius: 2px;
 }
 
-.big {
+.head-name .big-p {
     font-weight: 1000;
     font-size: 1.2em;
 }
 
-.small {
+.head-name .small-p {
     font-size: 0.7em;
 }
 
@@ -351,11 +352,11 @@ button.bottom-btn {
         font-size: 3em;
     }
 
-    .big {
+    .head-name .big-p {
         font-size: 1.5em;
     }
 
-    .small {
+    .head-name .small-p {
         font-size: 0.8em;
     }
 
